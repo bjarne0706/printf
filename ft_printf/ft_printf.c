@@ -20,7 +20,8 @@ int		ft_printf(char *string, ...)
 	int size;
 
 	i = 0;
-	g_full_str = "";
+	g_full_str = ft_memalloc(1);
+	g_full_str[0] = '\0';
 	va_start(ap, string);
 	while (string[i])
 	{
@@ -34,27 +35,31 @@ int		ft_printf(char *string, ...)
 			ft_strdel(&flag);
 		}
 		else
+		{
+			g_temp = g_full_str;
 			g_full_str = ft_strjoin_for_one(g_full_str, &string[i]);
+			free(g_temp);
+		}
 		i++;
 	}
 	va_end(ap);
 	ft_putstr(g_full_str);
 	size = ft_strlen(g_full_str);
-	ft_strdel(&g_full_str);
+	free(g_full_str);
 	return (size);
 }
 
-void	for_string(char *s)
+void	for_s(va_list ap)
 {
-	g_full_str = ft_strjoin(g_full_str, s);
+	g_full_str = ft_strjoin(g_full_str, va_arg(ap, char *));
 }
-void	for_pointer(size_t x)
+void	for_p(va_list ap)
 {
 	char *adr;
 	char *fin_adr;
 
 	fin_adr = "0x";
-	adr = ft_itoa_base(x, 16, 1);
+	adr = ft_itoa_base(va_arg(ap, int), 16, 1);
 	fin_adr = ft_strjoin(fin_adr, adr);
 	g_full_str = ft_strjoin_for_one(g_full_str, fin_adr);
 	ft_strdel(&adr);
@@ -62,7 +67,45 @@ void	for_pointer(size_t x)
 }
 
 
-void	for_char(char c)
+void	for_c(va_list ap)
 {
-	g_full_str = ft_strjoin_for_one(g_full_str, &c);
+	g_full_str = ft_strjoin_for_one(g_full_str, va_arg(ap, char *));
+}
+
+void	for_x(va_list ap)
+{
+
+}
+
+void	for_X(va_list ap)
+{
+
+}
+
+void	for_o(va_list ap)
+{
+
+}
+
+void	for_u(va_list ap)
+{
+
+}
+
+
+
+char		*ft_strjoin_for_one(char const *s1, char const *s2)
+{
+	char	*s_new;
+	int		i;
+
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	i = ft_strlen(s1) + ft_strlen(s2);
+	if (!(s_new = ft_memalloc(i + 1)))
+		return (NULL);
+	ft_strcat(s_new, (char *)s1);
+	ft_strcat_for_letter(s_new, (char *)s2);
+	s_new[i + 1] = '\0';
+	return (s_new);
 }

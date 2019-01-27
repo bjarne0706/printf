@@ -5,28 +5,66 @@
 #                                                     +:+ +:+         +:+      #
 #    By: dchantse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/01/04 18:00:24 by dchantse          #+#    #+#              #
-#    Updated: 2019/01/04 18:00:27 by dchantse         ###   ########.fr        #
+#    Created: 2018/11/22 12:38:10 by dchantse          #+#    #+#              #
+#    Updated: 2019/01/26 18:56:43 by anerus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_printf
+C = clang
+
+NAME = libftprintf.a
+
+FLAGS = -Wall -Wextra -Werror -O2
+
+LIBFT = libft
+
+DIR_S = sources
+
+DIR_O = temporary
+
+HEADER = include
+
+SOURCES = ft_printf.c \
+		  int.c \
+		  flags.c \
+		  perc.c \
+		  work_param.c \
+		  ft_itoa_base.c \
+		  main2.c
+
+SRCS = $(SOURCES)
+
+OBJS = $(SOURCES:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	@make -C libft/ fclean && make -C libft/
-	@clang -I libft/ -o main.o -c main.c -g
-	@clang -I libft/ -o ft_itoa_base.o -c ft_itoa_base.c -g
-	@clang -I libft/ -o ft_printf.o -c ft_printf.c -g
-	@clang -I libft/ -o help_func.o -c help_func.c -g
-	@clang -I libft/ -o flags.o -c flags.c -g
-	@clang -I libft/ -o int.o -c int.c -g
-	@clang -o ft_printf main.o int.o ft_itoa_base.o ft_printf.o flags.o help_func.o -I libft/ -L libft/ -lft -g
+$(NAME): $(OBJS)
+	@make -C $(LIBFT)
+	@cp libft/libft.a ./$(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@gcc main2.c libftprintf.a -o ft_printf
+	@echo ---------------------------
+	@./ft_printf
+
+%.o: %.c
+	@mkdir -p temporary
+	@$(CC) -I $(HEADER) -o $@ -c $<
+
+norme:
+	norminette ./libft/
+	@echo
+	norminette ./$(HEADER)/
+	@echo
+	norminette ./$(DIR_S)/
+
 clean:
 	@rm -rf *.o
 	@make -C libft/ clean
+
 fclean: clean
+	@rm -rf $(NAME)
 	@rm -rf ft_printf
 	@make -C libft/ fclean
+
 re: fclean all

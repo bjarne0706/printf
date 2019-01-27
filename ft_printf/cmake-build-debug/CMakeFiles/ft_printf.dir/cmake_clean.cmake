@@ -66,10 +66,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/flags.c.o"
   "CMakeFiles/ft_printf.dir/ft_itoa_base.c.o"
   "CMakeFiles/ft_printf.dir/ft_printf.c.o"
-  "CMakeFiles/ft_printf.dir/help_func.c.o"
-  "CMakeFiles/ft_printf.dir/main.c.o"
   "CMakeFiles/ft_printf.dir/int.c.o"
+  "CMakeFiles/ft_printf.dir/main2.c.o"
   "CMakeFiles/ft_printf.dir/work_param.c.o"
+  "CMakeFiles/ft_printf.dir/perc.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

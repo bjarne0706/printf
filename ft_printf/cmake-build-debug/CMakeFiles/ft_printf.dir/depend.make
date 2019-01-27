@@ -13,10 +13,6 @@ CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../libft/libft.h
 
-CMakeFiles/ft_printf.dir/help_func.c.o: ../ft_printf.h
-CMakeFiles/ft_printf.dir/help_func.c.o: ../help_func.c
-CMakeFiles/ft_printf.dir/help_func.c.o: ../libft/libft.h
-
 CMakeFiles/ft_printf.dir/int.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/int.c.o: ../int.c
 CMakeFiles/ft_printf.dir/int.c.o: ../libft/libft.h
@@ -201,7 +197,15 @@ CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
 CMakeFiles/ft_printf.dir/libft/ft_word_count.c.o: ../libft/ft_word_count.c
 CMakeFiles/ft_printf.dir/libft/ft_word_count.c.o: ../libft/libft.h
 
-CMakeFiles/ft_printf.dir/main.c.o: ../ft_printf.h
-CMakeFiles/ft_printf.dir/main.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/main.c.o: ../main.c
+CMakeFiles/ft_printf.dir/main2.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/main2.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/main2.c.o: ../main2.c
+
+CMakeFiles/ft_printf.dir/perc.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/perc.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/perc.c.o: ../perc.c
+
+CMakeFiles/ft_printf.dir/work_param.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/work_param.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/work_param.c.o: ../work_param.c
 

@@ -3,18 +3,21 @@
 void	work_on_flag(char *string)
 {
 	int i;
-	int dot;
-
-	dot = 0;
+//	int dot;
+//
+//	dot = 0;
 	i = 0;
 	while (string[i])
 	{
+		if (string[i] == '0' && flags.zero == 0)
+		{
+			flags.zero = 1;
+			i++;
+		}
 		if (string[i] == '+')
 			flags.plus = 1;
 		if (string[i] == '-')
 			flags.minus = 1;
-		if (string[i] == '0')
-			flags.zero = 1;
 		if (string[i] == '#')
 			flags.hesh = 1;
 		if (string[i] == ' ')
@@ -28,18 +31,19 @@ void	work_on_flag(char *string)
 		}
 		if (string[i] == 'l')
 		{
+
 			if (string[i + 1] == 'l')
+			{
 				flags.ll = 1;
+				i++;
+			}
 			else
 				flags.l = 1;
 		}
-		if (ft_isalnum(string[i]) && !dot)
-			i += whats_width(string, i);
-		if (string[i] == '.' && ft_isalnum(string[i + 1]))
-		{
-			i += precision(string, i + 1);
-			dot = 1;
-		}
+		if (ft_isdigit(string[i])&& string[i] != '0' && string[i - 1] != '.')
+			i += whats_width(string, i) - 1;
+		if (string[i] == '.' && ft_isdigit(string[i + 1]))
+			i += precision(string, i + 1) - 1;
 		else if (ft_isalpha(string[i]))
 			flags.type = string[i];
 		i++;
@@ -50,14 +54,16 @@ int 	whats_width(char *string, int i)
 	char *num;
 	int len;
 
-	num = "";
-	while (string[i] != '.' && !ft_isalpha(string[i]))
+	num = ft_memalloc(1);
+	num[0] = '\0';
+	while (ft_isdigit(string[i]))
 	{
 		num = ft_strjoin_for_one(num, &string[i]);
 		i++;
 	}
 	len = ft_strlen(num);
 	flags.width = ft_atoi(num);
+	free(num);
 	return (len);
 }
 int 	precision(char *string, int i)
@@ -83,12 +89,14 @@ char 	*get_this_flag(char *string, int i)
 	int j;
 	int size;
 
-	j = i;
+	j = i + 1;
 	while (string[j] != 'c' && string[j] != 's' && string[j] != 'p' &&
 			string[j] != 'd' && string[j] != 'i' && string[j] != 'o' &&
-			string[j] != 'u' && string[j] != 'x' && string[j] != 'X')
+			string[j] != 'u' && string[j] != 'x' && string[j] != 'X' && string[j] != '%' && string[j])
 		j++;
 	size = j - i;
+	if (string[j] == '%')
+		size++;
 	new_str = ft_memalloc(size + 1);
 	j = 0;
 	i++;

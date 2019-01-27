@@ -17,7 +17,23 @@ void	clean_param()
 }
 void 	work_on_param(va_list ap)
 {
-	if (flags.type == 'd')
-
+	if (flags.type == 'd' || flags.type == 'i')
+		for_di(ap);
+	if (flags.type == '%')
+		for_perc();
+	if (flags.type == 'o')
+		for_o(ap);
+	if (flags.type == 'u')
+		for_u(ap);
+	if (flags.type == 'x')
+		for_x(ap);
+	if (flags.type == 'X')
+		for_X(ap);
+	if (flags.type == 's')
+		for_s(ap);
+	if (flags.type == 'c')
+		for_c(ap);
+	if (flags.type == 'p')
+		for_p(ap);
 }
 

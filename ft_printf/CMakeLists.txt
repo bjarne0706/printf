@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.13)
 project(ft_printf C)
 
 set(CMAKE_C_STANDARD 11)
@@ -76,5 +76,6 @@ add_executable(ft_printf
         ft_itoa_base.c
         ft_printf.c
         ft_printf.h
-        help_func.c
-        main.c int.c work_param.c)
+        int.c
+        main2.c
+        work_param.c perc.c)

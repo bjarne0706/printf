@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dchantse/Desktop/ft_printf
+CMAKE_SOURCE_DIR = /Users/dchantse/Desktop/git-printf/ft_printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dchantse/Desktop/ft_printf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dchantse/Desktop/ft_printf/cmake-build-debug/CMakeFiles /Users/dchantse/Desktop/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles /Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dchantse/Desktop/ft_printf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,33 +203,6 @@ ft_printf.s: ft_printf.c.s
 ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
-
-help_func.o: help_func.c.o
-
-.PHONY : help_func.o
-
-# target to build an object file
-help_func.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/help_func.c.o
-.PHONY : help_func.c.o
-
-help_func.i: help_func.c.i
-
-.PHONY : help_func.i
-
-# target to preprocess a source file
-help_func.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/help_func.c.i
-.PHONY : help_func.c.i
-
-help_func.s: help_func.c.s
-
-.PHONY : help_func.s
-
-# target to generate assembly for a file
-help_func.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/help_func.c.s
-.PHONY : help_func.c.s
 
 int.o: int.c.o
 
@@ -1986,32 +1959,59 @@ libft/ft_word_count.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_word_count.c.s
 .PHONY : libft/ft_word_count.c.s
 
-main.o: main.c.o
+main2.o: main2.c.o
 
-.PHONY : main.o
+.PHONY : main2.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.o
-.PHONY : main.c.o
+main2.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main2.c.o
+.PHONY : main2.c.o
 
-main.i: main.c.i
+main2.i: main2.c.i
 
-.PHONY : main.i
+.PHONY : main2.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.i
-.PHONY : main.c.i
+main2.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main2.c.i
+.PHONY : main2.c.i
 
-main.s: main.c.s
+main2.s: main2.c.s
 
-.PHONY : main.s
+.PHONY : main2.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.s
-.PHONY : main.c.s
+main2.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main2.c.s
+.PHONY : main2.c.s
+
+perc.o: perc.c.o
+
+.PHONY : perc.o
+
+# target to build an object file
+perc.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/perc.c.o
+.PHONY : perc.c.o
+
+perc.i: perc.c.i
+
+.PHONY : perc.i
+
+# target to preprocess a source file
+perc.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/perc.c.i
+.PHONY : perc.c.i
+
+perc.s: perc.c.s
+
+.PHONY : perc.s
+
+# target to generate assembly for a file
+perc.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/perc.c.s
+.PHONY : perc.c.s
 
 work_param.o: work_param.c.o
 
@@ -2058,9 +2058,6 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
-	@echo "... help_func.o"
-	@echo "... help_func.i"
-	@echo "... help_func.s"
 	@echo "... int.o"
 	@echo "... int.i"
 	@echo "... int.s"
@@ -2256,9 +2253,12 @@ help:
 	@echo "... libft/ft_word_count.o"
 	@echo "... libft/ft_word_count.i"
 	@echo "... libft/ft_word_count.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... main2.o"
+	@echo "... main2.i"
+	@echo "... main2.s"
+	@echo "... perc.o"
+	@echo "... perc.i"
+	@echo "... perc.s"
 	@echo "... work_param.o"
 	@echo "... work_param.i"
 	@echo "... work_param.s"

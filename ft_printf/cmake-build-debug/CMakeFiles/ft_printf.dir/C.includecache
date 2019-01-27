@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/dchantse/Desktop/ft_printf/flags.c
+/Users/dchantse/Desktop/git-printf/ft_printf/flags.c
 ft_printf.h
-/Users/dchantse/Desktop/ft_printf/ft_printf.h
+/Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
 
-/Users/dchantse/Desktop/ft_printf/ft_printf.h
+/Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
 stdarg.h
 -
 unistd.h
 -
 libft/libft.h
-/Users/dchantse/Desktop/ft_printf/libft/libft.h
+/Users/dchantse/Desktop/git-printf/ft_printf/libft/libft.h
 stdio.h
 -
 
-/Users/dchantse/Desktop/ft_printf/libft/libft.h
+/Users/dchantse/Desktop/git-printf/ft_printf/libft/libft.h
 stdlib.h
 -
 unistd.h
@@ -29,8 +29,4 @@ ctype.h
 -
 fcntl.h
 -
-
-/Users/dchantse/Desktop/ft_printf/main.c
-ft_printf.h
-/Users/dchantse/Desktop/ft_printf/ft_printf.h
 
