@@ -1986,6 +1986,33 @@ main2.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main2.c.s
 .PHONY : main2.c.s
 
+o.o: o.c.o
+
+.PHONY : o.o
+
+# target to build an object file
+o.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/o.c.o
+.PHONY : o.c.o
+
+o.i: o.c.i
+
+.PHONY : o.i
+
+# target to preprocess a source file
+o.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/o.c.i
+.PHONY : o.c.i
+
+o.s: o.c.s
+
+.PHONY : o.s
+
+# target to generate assembly for a file
+o.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/o.c.s
+.PHONY : o.c.s
+
 perc.o: perc.c.o
 
 .PHONY : perc.o
@@ -2013,6 +2040,33 @@ perc.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/perc.c.s
 .PHONY : perc.c.s
 
+u.o: u.c.o
+
+.PHONY : u.o
+
+# target to build an object file
+u.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/u.c.o
+.PHONY : u.c.o
+
+u.i: u.c.i
+
+.PHONY : u.i
+
+# target to preprocess a source file
+u.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/u.c.i
+.PHONY : u.c.i
+
+u.s: u.c.s
+
+.PHONY : u.s
+
+# target to generate assembly for a file
+u.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/u.c.s
+.PHONY : u.c.s
+
 work_param.o: work_param.c.o
 
 .PHONY : work_param.o
@@ -2039,6 +2093,33 @@ work_param.s: work_param.c.s
 work_param.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/work_param.c.s
 .PHONY : work_param.c.s
+
+xX.o: xX.c.o
+
+.PHONY : xX.o
+
+# target to build an object file
+xX.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/xX.c.o
+.PHONY : xX.c.o
+
+xX.i: xX.c.i
+
+.PHONY : xX.i
+
+# target to preprocess a source file
+xX.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/xX.c.i
+.PHONY : xX.c.i
+
+xX.s: xX.c.s
+
+.PHONY : xX.s
+
+# target to generate assembly for a file
+xX.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/xX.c.s
+.PHONY : xX.c.s
 
 # Help Target
 help:
@@ -2256,12 +2337,21 @@ help:
 	@echo "... main2.o"
 	@echo "... main2.i"
 	@echo "... main2.s"
+	@echo "... o.o"
+	@echo "... o.i"
+	@echo "... o.s"
 	@echo "... perc.o"
 	@echo "... perc.i"
 	@echo "... perc.s"
+	@echo "... u.o"
+	@echo "... u.i"
+	@echo "... u.s"
 	@echo "... work_param.o"
 	@echo "... work_param.i"
 	@echo "... work_param.s"
+	@echo "... xX.o"
+	@echo "... xX.i"
+	@echo "... xX.s"
 .PHONY : help
 
 

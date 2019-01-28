@@ -201,6 +201,10 @@ CMakeFiles/ft_printf.dir/main2.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/main2.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/main2.c.o: ../main2.c
 
+CMakeFiles/ft_printf.dir/o.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/o.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/o.c.o: ../o.c
+
 CMakeFiles/ft_printf.dir/perc.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/perc.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/perc.c.o: ../perc.c
@@ -208,4 +212,8 @@ CMakeFiles/ft_printf.dir/perc.c.o: ../perc.c
 CMakeFiles/ft_printf.dir/work_param.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/work_param.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/work_param.c.o: ../work_param.c
+
+CMakeFiles/ft_printf.dir/xX.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/xX.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/xX.c.o: ../xX.c
 

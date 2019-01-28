@@ -297,10 +297,19 @@
 		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/main2.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/o.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/perc.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/u.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/work_param.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/xX.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/CMakeLists.txt">

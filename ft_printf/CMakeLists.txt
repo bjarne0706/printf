@@ -78,4 +78,4 @@ add_executable(ft_printf
         ft_printf.h
         int.c
         main2.c
-        work_param.c perc.c)
+        work_param.c perc.c xX.c o.c u.c)

@@ -1,88 +1,61 @@
 #include "ft_printf.h"
 
-void	for_di(va_list ap)
+void	for_u(va_list ap)
 {
 	if ((flags.hesh && flags.precision != 0) || flags.plus)
 		flags.zero = 0;
 	if (flags.hh)
-		hh_d(va_arg(ap, int));
+		hh_u(va_arg(ap, int));
 	else if (flags.h)
-		h_d(va_arg(ap, int));
+		h_u(va_arg(ap, int));
 	else if (flags.ll)
-		ll_d(va_arg(ap, int));
+		ll_u(va_arg(ap, unsigned long long));
 	else if (flags.l)
-		l_d(va_arg(ap, int));
+		l_u(va_arg(ap, unsigned long));
 	else
-		no_diftype_d(va_arg(ap, int));
+		no_diftype_u(va_arg(ap, int));
 }
 
-void hh_d(char d)
+void hh_u(unsigned char d)
 {
 	int sign;
 
 	sign = 0;
-	if (d < 0)
-	{
-		g_full_str = ft_strjoin_for_one(g_full_str, "-");
-		d = -d;
-		sign = 1;
-		flags.width = flags.width - 1;
-		if (flags.plus)
-			flags.plus = 0;
-	}
 	if (flags.precision > int_size(d))
-		with_prec_ll_d(ft_itoa(d), sign);
+		with_prec_ll_u(ft_itoa(d), sign);
 	else if (flags.width > int_size(d) && flags.width > flags.precision)
-		make_width_ll_d(ft_itoa(d));
+		make_width_ll_u(ft_itoa(d));
 	else
 		g_full_str = ft_strjoin(g_full_str, ft_itoa(d));
 }
 
-void h_d(short d)
+void h_u(unsigned short d)
 {
 	int sign;
 
 	sign = 0;
-	if (d < 0)
-	{
-		g_full_str = ft_strjoin_for_one(g_full_str, "-");
-		d = -d;
-		sign = 1;
-		flags.width = flags.width - 1;
-		if (flags.plus)
-			flags.plus = 0;
-	}
 	if (flags.precision > int_size(d))
-		with_prec_ll_d(ft_itoa(d), sign);
+		with_prec_ll_u(ft_itoa(d), sign);
 	else if (flags.width > int_size(d) && flags.width > flags.precision)
-		make_width_ll_d(ft_itoa(d));
+		make_width_ll_u(ft_itoa(d));
 	else
 		g_full_str = ft_strjoin(g_full_str, ft_itoa(d));
 }
 
-void ll_d(long long d)
+void ll_u(unsigned long long d)
 {
 	int sign;
 
 	sign = 0;
-	if (d < 0)
-	{
-		g_full_str = ft_strjoin_for_one(g_full_str, "-");
-		d = -d;
-		sign = 1;
-		flags.width = flags.width - 1;
-		if (flags.plus)
-			flags.plus = 0;
-	}
 	if (flags.precision > int_size(d))
-		with_prec_ll_d(ft_itoa(d), sign);
+		with_prec_ll_u(ft_itoa(d), sign);
 	else if (flags.width > int_size(d) && flags.width > flags.precision)
-		make_width_ll_d(ft_itoa(d));
+		make_width_ll_u(ft_itoa(d));
 	else
 		g_full_str = ft_strjoin(g_full_str, ft_itoa(d));
 }
 
-void l_d(long d)
+void l_u(unsigned long d)
 {
 	int sign;
 	char *tmp;
@@ -90,67 +63,48 @@ void l_d(long d)
 	sign = 0;
 	tmp = ft_memalloc(1);
 	tmp[0] = '\0';
-	if (d < 0)
-	{
-		tmp = g_full_str;
-		g_full_str = ft_strjoin_for_one(g_full_str, "-");
-		d = -d;
-		sign = 1;
-		flags.width = flags.width - 1;
-		if (flags.plus)
-			flags.plus = 0;
-	}
 	if (flags.precision > int_size(d))
-		with_prec_ll_d(ft_itoa(d), sign);
+		with_prec_ll_u(ft_itoa(d), sign);
 	else if (flags.width > int_size(d) && flags.width > flags.precision)
-		make_width_ll_d(ft_itoa(d));
+		make_width_ll_u(ft_itoa(d));
 	else
 		g_full_str = ft_strjoin(g_full_str, ft_itoa(d));
 	if (tmp)
 		free(tmp);
 }
 
-void no_diftype_d(int d)
+void no_diftype_u(unsigned int d)
 {
 	int sign;
 
 	sign = 0;
 	if (flags.minus)
 		flags.zero = 0;
-	if (d < 0 && (flags.zero || flags.precision != 0))
-	{
-		d = -d;
-		sign = 1;
-		flags.width = flags.width - 1;
-		if (flags.plus)
-			flags.plus = 0;
-	}
-
 	if (flags.precision > int_size(d))
-		with_prec_ll_d(ft_itoa(d), sign);
+		with_prec_ll_u(ft_itoa(d), sign);
 	else if (flags.width > int_size(d) && flags.width > flags.precision)
-		make_width_ll_d(ft_itoa(d));
+		make_width_ll_u(ft_itoa(d));
 	else
 	{
-		if (flags.plus && d >= 0)
+		if (flags.plus)
 			g_full_str = ft_strjoin(g_full_str, "+");
 		g_full_str = ft_strjoin(g_full_str, ft_itoa(d));
 	}
 
 }
 
-void with_prec_ll_d(char *d, int sign)
+void with_prec_ll_u(char *d, int sign)
 {
 	char *buf;
 
 	buf = ft_memalloc(1);
 	buf[0] = '\0';
-	make_prec_ll_d(buf, d, sign);
+	make_prec_ll_u(buf, d, sign);
 	free(buf);
-//	make_width_ll_d();
+//	make_width_ll_u();
 }
 
-void make_prec_ll_d(char *str, char *d, int sign)
+void make_prec_ll_u(char *str, char *d, int sign)
 {
 	int i;
 	int len;
@@ -165,7 +119,7 @@ void make_prec_ll_d(char *str, char *d, int sign)
 		str = ft_strjoin_for_one(str, "0");
 	str = ft_strjoin(str, d);
 	if (flags.width >= ft_strlen(str))
-		make_width_ll_d(str);
+		make_width_ll_u(str);
 	else
 	{
 		g_full_str = ft_strjoin(g_full_str, str);
@@ -173,7 +127,7 @@ void make_prec_ll_d(char *str, char *d, int sign)
 	}
 }
 
-void make_width_ll_d(char *str)
+void make_width_ll_u(char *str)
 {
 	int i;
 	int len;
@@ -207,3 +161,4 @@ void make_width_ll_d(char *str)
 		buf = ft_strjoin(buf, str);
 	g_full_str = ft_strjoin(g_full_str,buf);
 }
+

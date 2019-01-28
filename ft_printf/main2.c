@@ -4,8 +4,9 @@ int main(void)
 {
 //	short str;
 //	char *string = "string";
-	ft_printf("My: y = %5%|\n", 42);
-	printf("Orig: y = %5%|\n", 42);
+	int i = 42;
+	ft_printf("My: y = |% u|\n", 42);
+	printf("Or: y = |% d|\n", 42);
 //	printf("%0-10d 4\n", 5);
 //	str = (short)string;
 //	printf("%+015.10d", 5);

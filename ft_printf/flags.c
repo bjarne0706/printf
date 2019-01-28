@@ -44,7 +44,7 @@ void	work_on_flag(char *string)
 			i += whats_width(string, i) - 1;
 		if (string[i] == '.' && ft_isdigit(string[i + 1]))
 			i += precision(string, i + 1) - 1;
-		else if (ft_isalpha(string[i]))
+		else if (ft_isalpha(string[i]) || string[i] == '%')
 			flags.type = string[i];
 		i++;
 	}
@@ -72,7 +72,7 @@ int 	precision(char *string, int i)
 	int len;
 
 	num = "";
-	while (!ft_isalpha(string[i]))
+	while (!ft_isalpha(string[i]) && string[i] != '%')
 	{
 		num = ft_strjoin_for_one(num, &string[i]);
 		i++;
@@ -95,8 +95,6 @@ char 	*get_this_flag(char *string, int i)
 			string[j] != 'u' && string[j] != 'x' && string[j] != 'X' && string[j] != '%' && string[j])
 		j++;
 	size = j - i;
-	if (string[j] == '%')
-		size++;
 	new_str = ft_memalloc(size + 1);
 	j = 0;
 	i++;

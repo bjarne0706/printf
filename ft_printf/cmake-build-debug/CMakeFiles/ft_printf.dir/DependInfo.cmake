@@ -73,8 +73,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dchantse/Desktop/git-printf/ft_printf/libft/ft_toupper.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/libft/ft_word_count.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_word_count.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/main2.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/main2.c.o"
+  "/Users/dchantse/Desktop/git-printf/ft_printf/o.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/o.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/perc.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/perc.c.o"
+  "/Users/dchantse/Desktop/git-printf/ft_printf/u.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/u.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/work_param.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/work_param.c.o"
+  "/Users/dchantse/Desktop/git-printf/ft_printf/xX.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/xX.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

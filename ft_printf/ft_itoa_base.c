@@ -9,23 +9,28 @@ char	*ft_itoa_base(size_t value, int base, int type)
 
 	numb = ft_strnew(int_size(value));
 	i = 0;
-	while (value)
+	if (value == 0)
+		return (ft_itoa(value));
+	else
 	{
-		ost = value % base;
-		value = value / base;
-		if (ost > 9)
+		while (value)
 		{
-			if (type)
-				c = (ost - 9) + '`';
+			ost = value % base;
+			value = value / base;
+			if (ost > 9)
+			{
+				if (type)
+					c = (ost - 9) + '`';
+				else
+					c = (ost - 9) + '@';
+				ft_strcat_for_letter(numb, &c);
+			}
+			else if (ost == 0)
+				ft_strcat_for_letter(numb, "0");
 			else
-				c = (ost - 9) + '@';
-			ft_strcat_for_letter(numb, &c);
+				ft_strcat_for_letter(numb, ft_itoa(ost));
+			i++;
 		}
-		else if (ost == 0)
-			ft_strcat_for_letter(numb, "0");
-		else
-			ft_strcat_for_letter(numb, ft_itoa(ost));
-		i++;
 	}
 	numb = ft_reverse(numb);
 	return (numb);

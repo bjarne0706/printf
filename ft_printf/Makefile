@@ -30,7 +30,10 @@ SOURCES = ft_printf.c \
 		  perc.c \
 		  work_param.c \
 		  ft_itoa_base.c \
-		  main2.c
+		  main2.c \
+		  xX.c\
+		  o.c\
+		  u.c
 
 SRCS = $(SOURCES)
 

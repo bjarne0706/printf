@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/dchantse/Desktop/git-printf/ft_printf/flags.c
-ft_printf.h
-/Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
-
 /Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
 stdarg.h
 -
@@ -29,4 +25,8 @@ ctype.h
 -
 fcntl.h
 -
+
+/Users/dchantse/Desktop/git-printf/ft_printf/main2.c
+ft_printf.h
+/Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
 

@@ -70,6 +70,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/main2.c.o"
   "CMakeFiles/ft_printf.dir/work_param.c.o"
   "CMakeFiles/ft_printf.dir/perc.c.o"
+  "CMakeFiles/ft_printf.dir/xX.c.o"
+  "CMakeFiles/ft_printf.dir/o.c.o"
+  "CMakeFiles/ft_printf.dir/u.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

@@ -26,9 +26,9 @@ void 	work_on_param(va_list ap)
 	if (flags.type == 'u')
 		for_u(ap);
 	if (flags.type == 'x')
-		for_x(ap);
+		for_x(ap, 1);
 	if (flags.type == 'X')
-		for_X(ap);
+		for_x(ap, 0);
 	if (flags.type == 's')
 		for_s(ap);
 	if (flags.type == 'c')
