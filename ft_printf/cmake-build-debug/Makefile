@@ -123,6 +123,33 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
+c.o: c.c.o
+
+.PHONY : c.o
+
+# target to build an object file
+c.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/c.c.o
+.PHONY : c.c.o
+
+c.i: c.c.i
+
+.PHONY : c.i
+
+# target to preprocess a source file
+c.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/c.c.i
+.PHONY : c.c.i
+
+c.s: c.c.s
+
+.PHONY : c.s
+
+# target to generate assembly for a file
+c.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/c.c.s
+.PHONY : c.c.s
+
 flags.o: flags.c.o
 
 .PHONY : flags.o
@@ -2040,6 +2067,33 @@ perc.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/perc.c.s
 .PHONY : perc.c.s
 
+s.o: s.c.o
+
+.PHONY : s.o
+
+# target to build an object file
+s.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/s.c.o
+.PHONY : s.c.o
+
+s.i: s.c.i
+
+.PHONY : s.i
+
+# target to preprocess a source file
+s.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/s.c.i
+.PHONY : s.c.i
+
+s.s: s.c.s
+
+.PHONY : s.s
+
+# target to generate assembly for a file
+s.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/s.c.s
+.PHONY : s.c.s
+
 u.o: u.c.o
 
 .PHONY : u.o
@@ -2130,6 +2184,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
+	@echo "... c.o"
+	@echo "... c.i"
+	@echo "... c.s"
 	@echo "... flags.o"
 	@echo "... flags.i"
 	@echo "... flags.s"
@@ -2343,6 +2400,9 @@ help:
 	@echo "... perc.o"
 	@echo "... perc.i"
 	@echo "... perc.s"
+	@echo "... s.o"
+	@echo "... s.i"
+	@echo "... s.s"
 	@echo "... u.o"
 	@echo "... u.i"
 	@echo "... u.s"

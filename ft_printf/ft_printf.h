@@ -5,9 +5,6 @@
 # include <unistd.h>
 # include "libft/libft.h"
 
-# define KEK printf("KEK\n");
-# define KEK2 printf("KEK2\n");
-
 # include <stdio.h>
 
 typedef struct 	s_flags
@@ -31,11 +28,8 @@ char 	*g_full_str;
 char 	*g_temp;
 //ft_printf
 int		ft_printf(char *string, ...);
-void	for_s(va_list(ap));
 void	for_c(va_list(ap));
 void	for_p(va_list(ap));
-void	for_o(va_list(ap));
-void	for_u(va_list(ap));
 char	*ft_strjoin_for_one(char const *s1, char const *s2);
 //ft_itoa
 char	*ft_itoa(long long num);
@@ -79,6 +73,7 @@ void	make_prec_x(char *str, char *d);
 void	make_width_x(char *num);
 void	with_prec_x(char *num);
 //o
+void	for_o(va_list(ap));
 void	hh_o(int x);
 void	h_o(int x);
 void	l_o(unsigned long x);
@@ -88,7 +83,8 @@ void	make_all_for_o(char *num);
 void	with_prec_o(char *num);
 void	make_width_o(char *num);
 void	make_prec_o(char *str, char *d);
-//u 	
+//u
+void	for_u(va_list(ap));
 void	hh_u(unsigned char d);
 void	h_u(unsigned short d);
 void	ll_u(unsigned long long d);
@@ -97,4 +93,10 @@ void	no_diftype_u(unsigned int d);
 void	with_prec_ll_u(char *d, int sign);
 void	make_prec_ll_u(char *str, char *d, int sign);
 void	make_width_ll_u(char *str);
+//s
+void	for_s(va_list(ap));
+void	make_prec_s(char *str);
+void	make_width_s(char *str);
+void	put_s(char *str);
+
 #endif

@@ -33,7 +33,8 @@ SOURCES = ft_printf.c \
 		  main2.c \
 		  xX.c\
 		  o.c\
-		  u.c
+		  u.c\
+		  s.c
 
 SRCS = $(SOURCES)
 

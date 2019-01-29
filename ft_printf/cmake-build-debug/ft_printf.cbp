@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/c.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/flags.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -301,6 +304,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/perc.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/s.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/dchantse/Desktop/git-printf/ft_printf/u.c">

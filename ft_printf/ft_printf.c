@@ -49,10 +49,7 @@ int		ft_printf(char *string, ...)
 	return (size);
 }
 
-void	for_s(va_list ap)
-{
-	g_full_str = ft_strjoin(g_full_str, va_arg(ap, char *));
-}
+
 void	for_p(va_list ap)
 {
 	char *adr;

@@ -209,6 +209,14 @@ CMakeFiles/ft_printf.dir/perc.c.o
  /Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
  /Users/dchantse/Desktop/git-printf/ft_printf/libft/libft.h
  /Users/dchantse/Desktop/git-printf/ft_printf/perc.c
+CMakeFiles/ft_printf.dir/s.c.o
+ /Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
+ /Users/dchantse/Desktop/git-printf/ft_printf/libft/libft.h
+ /Users/dchantse/Desktop/git-printf/ft_printf/s.c
+CMakeFiles/ft_printf.dir/u.c.o
+ /Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
+ /Users/dchantse/Desktop/git-printf/ft_printf/libft/libft.h
+ /Users/dchantse/Desktop/git-printf/ft_printf/u.c
 CMakeFiles/ft_printf.dir/work_param.c.o
  /Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.h
  /Users/dchantse/Desktop/git-printf/ft_printf/libft/libft.h

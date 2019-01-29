@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/dchantse/Desktop/git-printf/ft_printf/c.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/c.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/flags.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/flags.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/ft_itoa_base.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_itoa_base.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/ft_printf.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
@@ -75,6 +76,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dchantse/Desktop/git-printf/ft_printf/main2.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/main2.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/o.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/o.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/perc.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/perc.c.o"
+  "/Users/dchantse/Desktop/git-printf/ft_printf/s.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/s.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/u.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/u.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/work_param.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/work_param.c.o"
   "/Users/dchantse/Desktop/git-printf/ft_printf/xX.c" "/Users/dchantse/Desktop/git-printf/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/xX.c.o"
