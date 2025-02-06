@@ -1,0 +1,21 @@
+#sys/editors
+.vscode/
+.DS_Store
+CMakeLists.txt
+.idea
+
+
+#tmps
+vm/asm
+vm/corewar
+vm/*.s
+_to_do_list.txt
+
+
+# Object files
+*.o
+
+
+# Precompiled Headers
+*.gch
+*.pch
